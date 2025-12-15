@@ -56,6 +56,9 @@
   border-radius: 0.5rem;
   text-decoration: none;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar a:visited {
@@ -371,6 +374,7 @@ footer {
   max-width: 900px;
   margin: 2rem 0;
   padding: 0 1rem;
+  text-align: center;
 }
 
 .projects-section h1 {
@@ -426,10 +430,11 @@ footer {
   margin: 0;
   color: var(--cpt-text);
   flex-grow: 1;
+  text-align: center;
 }
 
 .project-box a {
-  align-self: flex-start;
+  align-self: center;
   color: var(--cpt-blue);
   border: 2px solid var(--cpt-blue);
   padding: 0.5rem 1rem;
