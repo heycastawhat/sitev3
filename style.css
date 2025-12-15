@@ -36,7 +36,8 @@
 }
 
 .navbar {
-  width: calc(100% + 1.8rem);
+  position: relative;
+  width: 100%;
   background-color: var(--cpt-surface1);
   padding: 1.35rem 1.8rem;
   display: flex;
@@ -44,10 +45,9 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   border-bottom: 1px solid var(--cpt-surface2);
-  margin-left: -0.9rem;
-  margin-right: -0.9rem;
   margin-top: -0.9rem;
   margin-bottom: 0.9rem;
+  z-index: 1;
 }
 
 .navbar a {
@@ -330,10 +330,10 @@ footer {
   margin-top: auto;
   padding: 1.35rem 1.8rem;
   background-color: var(--cpt-surface1);
-  width: calc(100% + 1.8rem);
-  margin-left: -0.9rem;
-  margin-right: -0.9rem;
+  width: 100%;
   border-top: 1px solid var(--cpt-surface2);
+  position: relative;
+  z-index: 1;
 }
 
 .tracker-section {
