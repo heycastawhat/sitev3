@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>Site v3</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="Favicon.png">
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="9942e529-74fa-4df8-9eb2-d4d670aa1d1e"></script>
-</head>
-
+    <link rel="icon" type="image/x-icon" href="images/Favicon.png">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="9942e529-74fa-4df8-9eb2-d4d670aa1d1e"></script>
+    <script async src="https://us.i.posthog.com/array.js"></script>
+    <script>
+        window.posthog=window.posthog||[];posthog.load='phc_etwCCcnzso1YZCxbWizV6qsVeMs2aoFRmoqz1F5eXgh',posthog.config({
+            api_host: 'https://us.i.posthog.com',
+            person_profiles: 'identified_only'
+        })
+    </script>
 <body>
   <nav class="navbar">
     <a href="https://github.com/heycastawhat">Github</a>
@@ -25,7 +30,7 @@
         </p>
       </div>
       <div class="hero-image">
-        <img id="pfp" src="PFP.png" alt="pfp" class="profile-pic" onclick="changeRandomPFP()">
+        <img id="pfp" src="images/PFP.png" alt="pfp" class="profile-pic" onclick="changeRandomPFP()">
       </div>
     </div>
         <p id="clickMe" onclick="showRandomQuote()" style="color: lavender;">
@@ -48,7 +53,7 @@
   <script src="tracking.js"></script>
   <script src="wisdom.js"></script>
   <script>
-    const pfpImages = ['PFP.png', 'Sad.png', 'aussie.png', 'flashbang.png', 'hallowpfp.png', 'xmaspfp.png'];
+    const pfpImages = ['images/PFP.png', 'images/Sad.png', 'images/aussie.png', 'images/flashbang.png', 'images/hallowpfp.png', 'images/xmaspfp.png'];
     
     function changeRandomPFP() {
       const pfpEl = document.getElementById('pfp');
