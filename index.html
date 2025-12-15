@@ -11,6 +11,7 @@
 <body>
   <nav class="navbar">
     <a href="https://github.com/heycastawhat">Github</a>
+    <a href="projects.html">Projects</a>
   </nav>
 
     <section class="hero">
@@ -20,11 +21,11 @@
         <h1 id="greeting">greeting goes here</h1>
         <h2>Welcome to my little corner of the internet</h2>
         <p>
-          words go here
+            I'm Josh (also known as castawhat or some variation of it), an amateur web developer and tech enthusiast. <br> I'm a member of Hack Club, where Ill hopefully enhance my coding skills and I make exciting projects like this website and Slack Annoyance! <br> Feel free to explore and learn more about me through the links provided.
         </p>
       </div>
       <div class="hero-image">
-        <img src="https://github.com/Castawhat/micheal.site-backend/blob/main/PFP-removebg-preview.png?raw=true" alt="The Fox" class="profile-pic">
+        <img id="pfp" src="PFP.png" alt="pfp" class="profile-pic" onclick="changeRandomPFP()">
       </div>
     </div>
         <p id="clickMe" onclick="showRandomQuote()" style="color: lavender;">
@@ -47,6 +48,30 @@
   <script src="tracking.js"></script>
   <script src="wisdom.js"></script>
   <script>
+    const pfpImages = ['PFP.png', 'Sad.png', 'aussie.png', 'flashbang.png', 'hallowpfp.png', 'xmaspfp.png'];
+    
+    function changeRandomPFP() {
+      const pfpEl = document.getElementById('pfp');
+      pfpEl.classList.remove('spinning');
+      
+      // Randomize animation
+      const spinDirection = Math.random() > 0.5 ? 'pfpSpinClockwise' : 'pfpSpinCounterClockwise';
+      const spinDuration = (0.4 + Math.random() * 0.4).toFixed(2) + 's'; // 0.4s to 0.8s
+      
+      pfpEl.style.setProperty('--spin-animation', spinDirection);
+      pfpEl.style.setProperty('--spin-duration', spinDuration);
+      
+      // Trigger reflow to restart animation
+      void pfpEl.offsetWidth;
+      
+      pfpEl.classList.add('spinning');
+      
+      setTimeout(() => {
+        const randomIndex = Math.floor(Math.random() * pfpImages.length);
+        pfpEl.src = pfpImages[randomIndex];
+      }, 300);
+    }
+    
     const hour = new Date().getHours();
     const greetingEl = document.getElementById('greeting');
     
