@@ -8,12 +8,17 @@
     <script defer src="https://cloud.umami.is/script.js" data-website-id="9942e529-74fa-4df8-9eb2-d4d670aa1d1e"></script>
 </head>
 
+<body>
+  <nav class="navbar">
+    <a href="https://github.com/heycastawhat">Github</a>
+  </nav>
+
     <section class="hero">
   <div class="hero-box hero-colored">
     <div class="hero-content">
       <div class="hero-text">
         <h1 id="greeting">greeting goes here</h1>
-        <h2>Welcome to my little corner of the internet.</h2>
+        <h2>Welcome to my little corner of the internet</h2>
         <p>
           words go here
         </p>
@@ -28,10 +33,18 @@
   </div>
 </section>
 
+<section class="tracker-section">
+  <div class="tracker-box">
+    <h1>Fun Lil' Stats</h1>
+    <p id="time"></p>
+    <p id="lastfm"></p>
+    
+  </div>
+</section>
 
 <footer>
   <p>footer goes here</p>
-  <script src="count.js"></script>
+  <script src="tracking.js"></script>
   <script src="wisdom.js"></script>
   <script>
     const hour = new Date().getHours();

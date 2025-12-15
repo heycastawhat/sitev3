@@ -5,9 +5,10 @@ function updateTime() {
   const now = new Date();
   const timeStr = now.toLocaleTimeString('en-NZ', {
     hour: '2-digit',
-    minute: '2-digit'
+    minute: '2-digit',
+    timeZone: 'Pacific/Auckland'
   });
-  document.getElementById('time').textContent = `Time: ${timeStr}`;
+  document.getElementById('time').textContent = `Time in NZ: ${timeStr}`;
 }
 updateTime();
 setInterval(updateTime, 60000);
