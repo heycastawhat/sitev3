@@ -45,7 +45,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   padding: 1rem;
   gap: 2rem;
@@ -67,7 +67,7 @@ body {
 
 .hero-content {
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -76,6 +76,13 @@ body {
 .hero-text {
   flex: 1;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-text p:first-of-type {
+  margin-top: -1.5rem;
 }
 
 .hero-image {
@@ -92,8 +99,10 @@ body {
   height: auto;
   border: 2px solid var(--cpt-blue);
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: var(--cpt-surface1);
+  display: block;
+  margin: 0 auto;
 }
 
 html {
@@ -104,17 +113,19 @@ html {
 h1, h2, h3, h4, h5, h6 {
   color: var(--cpt-lavender);
   font-weight: 600;
-  margin: 1.5rem 0 0.75rem 0;
+  margin: 0 0 0.25rem 0;
 }
 
 h1 {
   color: var(--cpt-mauve);
   font-size: 2.5rem;
+  margin-bottom: 0;
 }
 
 h2 {
   color: var(--cpt-blue);
   font-size: 2rem;
+  margin-top: -1.5rem;
 }
 
 h3 {
@@ -245,6 +256,15 @@ hr {
 ::selection {
   background-color: var(--cpt-mauve);
   color: var(--cpt-base);
+}
+
+#clickMe {
+  margin-top: 1.5rem;
+}
+
+footer {
+  margin-top: auto;
+  padding-bottom: 3rem;
 }
 
 /* Scrollbar */
