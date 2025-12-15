@@ -12,8 +12,8 @@
   <div class="hero-box hero-colored">
     <div class="hero-content">
       <div class="hero-text">
-        <h1>greeting goes here</h1>
-        <h2>thing goes here</h2>
+        <h1 id="greeting">greeting goes here</h1>
+        <h2>Welcome to my little corner of the internet.</h2>
         <p>
           words go here
         </p>
@@ -32,5 +32,19 @@
 <footer>
   <p>footer goes here</p>
   <script src="count.js"></script>
-<script src="wisdom.js"></script>
-`</footer>
+  <script src="wisdom.js"></script>
+  <script>
+    const hour = new Date().getHours();
+    const greetingEl = document.getElementById('greeting');
+    
+    if (hour < 12) {
+      greetingEl.textContent = 'Howdy!';
+    } else if (hour < 17) {
+      greetingEl.textContent = "G'day!";
+    } else if (hour < 21) {
+      greetingEl.textContent = 'Evening!';
+    } else {
+      greetingEl.textContent = 'Hey there!';
+    }
+  </script>
+</footer>
