@@ -247,7 +247,7 @@ input:focus, textarea:focus, select:focus {
 /* Code */
 code, pre {
   background-color: var(--cpt-surface0);
-  color: var(--cpt-peach);
+  color: var(--cpt-text);
   border-radius: 0.3375rem;
 }
 
@@ -767,4 +767,69 @@ footer {
 }
   background-color: var(--cpt-surface2);
   transform: translateY(-2px);
+}
+
+/* Changelog */
+.changelog-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.changelog-entry {
+  background-color: var(--cpt-surface0);
+  border-radius: 1.35rem;
+  padding: 2.7rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.changelog-entry h2 {
+  color: var(--cpt-blue);
+  margin-bottom: 0.45rem;
+  font-size: 1.8rem;
+}
+
+.changelog-entry time {
+  display: block;
+  color: var(--cpt-subtext0);
+  font-size: 0.9rem;
+  margin-bottom: 1.35rem;
+}
+
+.changelog-entry ul {
+  margin-left: 1.35rem;
+  color: var(--cpt-text);
+}
+
+.changelog-entry ul li {
+  margin-bottom: 0.45rem;
+}
+
+.changelog-entry ul ul {
+  margin-left: 1.35rem;
+  margin-top: 0.45rem;
+}
+
+.changelog-entry ul ul li {
+  color: var(--cpt-subtext1);
+}
+
+.changelog-image {
+  max-width: 600px;
+  height: auto;
+  border-radius: 0.9rem;
+  margin: 0 0 0 1.35rem;
+  display: block;
+  flex-shrink: 0;
+}
+
+.changelog-content {
+  display: flex;
+  gap: 1.8rem;
+  align-items: flex-start;
+}
+
+.changelog-text {
+  flex: 1;
 }
