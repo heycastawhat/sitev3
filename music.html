@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Site v3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/Favicon.png">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="9942e529-74fa-4df8-9eb2-d4d670aa1d1e"></script>
+    <script async src="https://us.i.posthog.com/array.js"></script>
+    <script>
+        window.posthog=window.posthog||[];posthog.load='phc_etwCCcnzso1YZCxbWizV6qsVeMs2aoFRmoqz1F5eXgh',posthog.config({
+            api_host: 'https://us.i.posthog.com',
+            person_profiles: 'identified_only'
+        })
+    </script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1>Music is also pretty cool</h1>
+  </nav>
+
+
+  <div class="content">
+    <h3>Here's some I'm into right now</h3>
+    
+    <div class="music-player">
+      <div class="now-playing">
+        <div class="album-art">
+          <img id="album-cover" src="images/album-art/Drag Path.jpg" alt="Album Cover">
+        </div>
+        <div class="track-info">
+          <h2 id="track-title">Select a track</h2>
+        </div>
+      </div>
+
+      <div class="player-controls">
+        <input type="range" id="progress-bar" class="progress-bar" min="0" max="100" value="0">
+        <div class="time-info">
+          <span id="current-time">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+
+      <div class="button-controls">
+        <button id="prev-btn" class="control-btn">⏮ Prev</button>
+        <button id="play-btn" class="control-btn play-btn">▶ Play</button>
+        <button id="next-btn" class="control-btn">Next ⏭</button>
+      </div>
+    </div>
+
+    <div class="playlist">
+      <h3>Playlist</h3>
+      <div class="tracks-list">
+        <div class="track-item" data-src="media/music/Drag Path.mp3" data-title="Drag Path">
+          <div class="track-number">1</div>
+          <div class="track-title">Drag Path</div>
+          <div class="track-duration">--:--</div>
+        </div>
+        <div class="track-item" data-src="media/music/Drum Show.mp3" data-title="Drum Show">
+          <div class="track-number">2</div>
+          <div class="track-title">Drum Show</div>
+          <div class="track-duration">--:--</div>
+        </div>
+        <div class="track-item" data-src="media/music/Lavish.mp3" data-title="Lavish">
+          <div class="track-number">3</div>
+          <div class="track-title">Lavish</div>
+          <div class="track-duration">--:--</div>
+        </div>
+        <div class="track-item" data-src="media/music/Leave the City.mp3" data-title="Leave the City">
+          <div class="track-number">4</div>
+          <div class="track-title">Leave the City</div>
+          <div class="track-duration">--:--</div>
+        </div>
+        <div class="track-item" data-src="media/music/Level of Concern.mp3" data-title="Level of Concern">
+          <div class="track-number">5</div>
+          <div class="track-title">Level of Concern</div>
+          <div class="track-duration">--:--</div>
+        </div>
+        <div class="track-item" data-src="media/music/The Hype.mp3" data-title="The Hype">
+          <div class="track-number">6</div>
+          <div class="track-title">The Hype</div>
+          <div class="track-duration">--:--</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <audio id="audio-player"></audio>
+    <script>
+      const audio = document.getElementById('audio-player');
+      const playBtn = document.getElementById('play-btn');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      const progressBar = document.getElementById('progress-bar');
+      const currentTimeEl = document.getElementById('current-time');
+      const durationEl = document.getElementById('duration');
+      const trackTitle = document.getElementById('track-title');
+      const albumCover = document.getElementById('album-cover');
+      const trackItems = document.querySelectorAll('.track-item');
+      let currentTrackIndex = 0;
+
+      function formatTime(seconds) {
+        if (!seconds || isNaN(seconds)) return '0:00';
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs.toString().padStart(2, '0')}`;
+      }
+
+      function loadTrack(index) {
+        currentTrackIndex = index;
+        const track = trackItems[index];
+        audio.src = track.dataset.src;
+        trackTitle.textContent = track.dataset.title;
+        
+        // Update album art
+        const trackName = track.dataset.title;
+        albumCover.src = `images/album-art/${trackName}.jpg`;
+        albumCover.onerror = () => {
+          albumCover.src = 'images/album-art/Drag Path.jpg';
+        };
+        
+        trackItems.forEach(t => t.classList.remove('active'));
+        track.classList.add('active');
+      }
+
+      function togglePlay() {
+        if (audio.src === '') {
+          loadTrack(0);
+        }
+        if (audio.paused) {
+          audio.play();
+          playBtn.textContent = '⏸ Pause';
+        } else {
+          audio.pause();
+          playBtn.textContent = '▶ Play';
+        }
+      }
+
+      function nextTrack() {
+        loadTrack((currentTrackIndex + 1) % trackItems.length);
+        audio.play();
+        playBtn.textContent = '⏸ Pause';
+      }
+
+      function prevTrack() {
+        loadTrack((currentTrackIndex - 1 + trackItems.length) % trackItems.length);
+        audio.play();
+        playBtn.textContent = '⏸ Pause';
+      }
+
+      playBtn.addEventListener('click', togglePlay);
+      nextBtn.addEventListener('click', nextTrack);
+      prevBtn.addEventListener('click', prevTrack);
+
+      audio.addEventListener('timeupdate', () => {
+        progressBar.value = (audio.currentTime / audio.duration) * 100 || 0;
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+      });
+
+      audio.addEventListener('loadedmetadata', () => {
+        durationEl.textContent = formatTime(audio.duration);
+      });
+
+      audio.addEventListener('ended', nextTrack);
+
+      progressBar.addEventListener('change', () => {
+        audio.currentTime = (progressBar.value / 100) * audio.duration;
+      });
+
+      trackItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          loadTrack(index);
+          audio.play();
+          playBtn.textContent = '⏸ Pause';
+        });
+      });
+    </script>
+    <p>Don't sue me pls</p>
+    <script src="script/tracking.js"></script>
+    <script src="script/wisdom.js"></script>
+  </footer>
+</body>
