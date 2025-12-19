@@ -1305,6 +1305,56 @@ footer {
   color: var(--cpt-red);
 }
 
+/* Button Grid */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0;
+}
+
+.button-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.button-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.button-grid a:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+@media (max-width: 1024px) {
+  .button-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .button-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .button-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .entries-grid {
     grid-template-columns: 1fr;
