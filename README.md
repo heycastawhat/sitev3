@@ -3,7 +3,7 @@ its a personal site with stuff what more would you want
 ---
 ## How to run:
 
-1. Pick your poison
+1. Pick your poison:
 ```npm run dev```
 or
 ```yarn dev```
