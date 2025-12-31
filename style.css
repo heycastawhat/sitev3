@@ -331,7 +331,7 @@ footer {
   padding: 1.35rem 1.8rem;
   background-color: var(--cpt-surface1);
   width: 100%;
-  border-top: 1px solid var(--cpt-surface2);
+  border-top: 1px solid var(--cpt-crust);
   position: relative;
   z-index: 1;
   display: flex;
