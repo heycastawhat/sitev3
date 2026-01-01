@@ -1,5 +1,7 @@
-# sitev3
+# sitev3 v3.0.4 fejoa
 its a personal site with stuff what more would you want
+built with HTML, CSS, JS, whatever randomness I felt like throwing in and code reused from sitev1 and v2 (if it works it works)
+
 ---
 ## How to run:
 
