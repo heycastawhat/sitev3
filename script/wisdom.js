@@ -81,6 +81,7 @@ const quotes = [
 "why is the sky blue",
 "why is water wet",
 "we all ponder of something great",
+"i amnt clancy",
 ];
 
 function showRandomQuote() {

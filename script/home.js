@@ -1,4 +1,4 @@
-const pfpImages = ['images/PFP.png', 'images/Sad.png', 'images/aussie.png', 'images/flashbang.png', 'images/hallowpfp.png', 'images/xmaspfp.png'];
+const pfpImages = ['images/newscare.png', 'images/PFP.png', 'images/Sad.png', 'images/aussie.png', 'images/flashbang.png', 'images/hallowpfp.png', 'images/xmaspfp.png'];
 
 function changeRandomPFP() {
   const pfpEl = document.getElementById('pfp');
@@ -32,5 +32,5 @@ if (hour < 12) {
 } else if (hour < 21) {
   greetingEl.textContent = 'Evening!';
 } else {
-  greetingEl.textContent = 'Hey there!';
+  greetingEl.textContent = 'Heyo!';
 }
