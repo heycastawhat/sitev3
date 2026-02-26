@@ -389,7 +389,7 @@ footer {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 1.8rem;
   margin-bottom: 1.8rem;
 }
@@ -414,7 +414,7 @@ footer {
 
 .project-image {
   width: calc(100% + 3.6rem);
-  height: 225px;
+  height: auto;
   border-radius: 0.675rem 0.675rem 0 0;
   overflow: hidden;
   margin: -1.8rem -1.8rem 0.9rem -1.8rem;
