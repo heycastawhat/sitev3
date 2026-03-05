@@ -1,15 +1,7 @@
 ---
-title: Hello World
+title: Hello World (again)!
 date: 2026-03-05
 ---
+## A new blog? In this economy?
 
-This is my first blog post! Written in Markdown.
-
-## A subheading
-
-You can write **bold**, *italic*, and even [links](https://example.com).
-
-- Lists work too
-- Just like this
-
-Pretty cool right?
+So yeah, I moved the blog to the website!
