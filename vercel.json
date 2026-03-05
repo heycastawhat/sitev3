@@ -1,6 +1,5 @@
 {
-  "framework": null,
-  "buildCommand": "npm run build",
-  "outputDirectory": "_site",
-  "cleanUrls": true
+  "framework": "hugo",
+  "buildCommand": "hugo",
+  "outputDirectory": "public"
 }

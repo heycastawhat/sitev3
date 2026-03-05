@@ -1,0 +1,6 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Site v3"
+
+[permalinks]
+  blog = "/blog/:slug/"

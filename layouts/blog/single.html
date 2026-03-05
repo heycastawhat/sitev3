@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Site v3</title>
+    <title>{{ .Title }} - Site v3</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="image/x-icon" href="/Favicon.png">
     <script async src="/script/posthog.js"></script>
@@ -11,20 +11,20 @@
 
 <body>
   <nav class="navbar">
-    <h1>{{ title }}</h1>
+    <h1>{{ .Title }}</h1>
   </nav>
 
   <section class="hero">
     <div class="hero-box">
-      <p class="blog-date">{{ date | date: "%B %d, %Y" }}</p>
-      {{ content }}
+      <p class="blog-date">{{ .Date.Format "January 2, 2006" }}</p>
+      {{ .Content }}
     </div>
   </section>
 
 </body>
 
 <footer>
-  <a href="/blog.html" class="back-button">← Back to Blog</a>
+  <a href="/blog/" class="back-button">← Back to Blog</a>
   <script async src="/script/tracking.js"></script>
   <script async src="/script/wisdom.js"></script>
 </footer>

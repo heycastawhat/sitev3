@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Site v3</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/Favicon.png">
+    <script async src="/script/posthog.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1>Blog</h1>
+  </nav>
+
+  <section class="projects-section">
+    <div class="projects-container">
+      {{ range .Pages.ByDate.Reverse }}
+      <div class="project-box">
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Date.Format "January 2, 2006" }}</p>
+        <a href="{{ .Permalink }}">Read Post</a>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+</body>
+
+<footer>
+  <a href="/index.html" class="back-button">← Back</a>
+  <script async src="/script/tracking.js"></script>
+  <script async src="/script/wisdom.js"></script>
+</footer>
+</html>
