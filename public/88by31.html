@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site v3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Favicon.png">
+    <script async src="script/posthog.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1>88x31 Buttons are awesome.</h1>
+  </nav>
+
+  <h2>Here are some various buttons.</h2>
+  <h3>If you want yours here, slide into my emails at hey (at) slitrostudio (dot) me</h3>
+
+  <button id="copy-button" onclick="copyButtonCode()">Copy My Button Code</button>
+
+  <section class="button-grid">
+    <a href="https://site.slitrostudio.me" target="_blank"><img src="https://site.slitrostudio.me/Slitro2.png" alt="Slitro Studio" width="88" height="31" /></a>
+    <img src="images/88by31/chrome.gif" alt="Chrome" width="88" height="31" />
+    <img src="images/88by31/firefox.gif" alt="Firefox" width="88" height="31" />
+    <img src="images/88by31/getfirefox-button.gif" alt="Get Firefox" width="88" height="31" />
+    <img src="images/88by31/html_learn_it_today.gif" alt="Learn HTML" width="88" height="31" />
+    <img src="images/88by31/mac.gif" alt="Mac" width="88" height="31" />
+    <img src="images/88by31/microhate.jpg" alt="Microhate" width="88" height="31" />
+    <img src="images/88by31/vscbutton.gif" alt="VSCode" width="88" height="31" />
+    <img src="images/88by31/web3.gif" alt="Web3" width="88" height="31" />
+    <img src="images/88by31/anythingbut.gif" alt="Web3" width="88" height="31" />
+    <img src="images/88by31/applelogo.gif" alt="Web3" width="88" height="31" />
+    <a href="https://notbyai.fyi" target="_blank"><img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fraw.githubusercontent.com%2FDekoder-py%2Fdekoder-py.github.io%2Fmain%2Fpublic%2Fbuttons%2Fnotbyai.png" alt="Not by AI" width="88" height="31" /></a>
+    <a href="https://home-assistant.io" target="_blank"><img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fraw.githubusercontent.com%2FDekoder-py%2Fdekoder-py.github.io%2Fmain%2Fpublic%2Fbuttons%2Fhome-assistant.gif" alt="Home Assistant" width="88" height="31" /></a>
+    <a href="https://codingcorner.dev/" target="_blank"><img src="https://codingcorner.dev/buttons/codingcorner.png" alt="Coding Corner" width="88" height="31"/></a>
+    <a href="https://www.valen.zip" target="_blank"><img src="https://www.valen.zip/button-bw.gif" alt="Valen's Site" width="88" height="31" /></a>
+    <a href="https://bomberfish.ca" target="_blank"><img src="https://bomberfish.ca/button.gif" alt="Bomberfish" width="88" height="31" /></a>
+    <a href="https://pkindustry.org" target="_blank"><img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/53764887c44b32b6_pkiexport.png" alt="PKindustries" width="88" height="31" /></a>
+    <a href="https://gideon.sh" target="_blank"><img src="https://gideon.sh/88x31.gif" alt="Gideon" width="88" height="31" /></a>
+    <a href="https://aconlin.com" target="_blank"><img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/a495eea70094538d_acon-gets-a-button-animated.gif" alt="acon" width="88" height="31" /></a>
+    
+  </section>
+
+  <footer>
+    <p>These buttons are awesome!</p>
+    <script>
+      function copyButtonCode() {
+        const buttonCode = `<a href="https://site.slitrostudio.me">
+    <img src="https://site.slitrostudio.me/Slitro2.png" width="88" height="31" alt="Slitro Studio">
+  </a>`;
+        navigator.clipboard.writeText(buttonCode).then(() => {
+          const btn = document.getElementById('copy-button');
+          const originalText = btn.textContent;
+          btn.textContent = 'Copied! Email me to get yours here! I want it :D';
+          setTimeout(() => {
+            btn.textContent = originalText;
+          }, 2000);
+        });
+      }
+    </script>
+    <a href="index.html" class="back-button">← Back</a>
+    <script async src="script/tracking.js"></script>
+    <script async src="script/wisdom.js"></script>
+  </footer>
+</body>

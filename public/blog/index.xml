@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Site v3</title>
+    <link>/blog/</link>
+    <description>Recent content in Blog on Site v3</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World (again)!</title>
+      <link>/blog/hello-world-again/</link>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/blog/hello-world-again/</guid>
+      <description>&lt;h2 id=&#34;a-new-blog-in-this-economy&#34;&gt;A new blog? In this economy?&lt;/h2&gt;&#xA;&lt;p&gt;So yeah, I moved the blog to the website!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
